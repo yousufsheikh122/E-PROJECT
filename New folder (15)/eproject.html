@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No. 1 Animated Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom Navbar Styles */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    transition: all 0.5s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1);
+    color: #ffc107 !important;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffc107;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+    transform: translateY(-3px);
+}
+
+/* Dropdown Animation */
+.dropdown-menu {
+    background-color: #343a40;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+/* Search Box and Button Styles */
+.search-box {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid #ffc107;
+    background-color: transparent;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+    border-color: #ffc107;
+}
+
+.search-btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid #ffc107;
+    color: #ffc107;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #ffc107;
+    color: #343a40;
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+
+    .form-inline {
+        margin-top: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-school"></i> School Name
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Academics
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Courses</a>
+                        <a class="dropdown-item" href="#">Admissions</a>
+                        <a class="dropdown-item" href="#">Faculty</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <!-- Search Box and Button -->
+            <form class="form-inline my-2 my-lg-0 ml-3">
+                <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-outline-warning my-2 my-sm-0 search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        $(document).ready(function() {
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
+        }
+    });
+
+    // Highlight the active menu item
+    $(window).scroll(function() {
+        var scrollDistance = $(window).scrollTop();
+        $('section').each(function(i) {
+            if ($(this).position().top <= scrollDistance + 100) {
+                $('.navbar-nav .nav-item.active').removeClass('active');
+                $('.navbar-nav .nav-item').eq(i).addClass('active');
+            }
+        });
+    }).scroll();
+
+    // Toggle search box on mobile
+    $('.search-btn').on('click', function(e) {
+        if ($(window).width() < 992) {
+            e.preventDefault();
+            $('.search-box').toggleClass('active');
+        }
+    });
+});
+    </script>
+</body>
+</html>
