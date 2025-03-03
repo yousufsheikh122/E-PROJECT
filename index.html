@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom Navbar Styles */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    background-color: #7AB843;
+    margin-top: 45px;
+    position: absolute;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    
+}   
+
+.navbar-brand i {
+    margin-right: 10px;
+    color: rgb(78, 72, 136);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+    0-
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b30505 !important;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+/* Search Box and Button Styles */
+.search-box {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid #444138;
+    background-color: transparent;
+    background-color: #fff;
+    color: #080202;
+    transition: all 0.3s ease;
+    padding: 5px;
+}
+
+.search-box:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+    border-color: #e3f1ef;
+}
+
+.search-btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid #ffc107;
+    color: #1322ac;
+    transition: all 0.3s ease;
+    
+}
+
+.search-btn:hover {
+    background-color: #756d53;
+    color: #343a40;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+
+    .form-inline {
+        margin-top: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+}
+.like{
+    height: 50px;
+    width: 100vw;
+    background-color: #EE7722;
+}
+#you{
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+.pic1{
+    position: relative;
+    margin-left: 50px;
+    margin-top: -1927px;
+    border-radius: 2%;
+}
+.fsElementTitle {
+        font-size: 85px;
+        line-height: 1.28572;
+        letter-spacing: 1.8px;
+        max-width: 1015px;
+        color: #EE7722;
+        font-family: serif;
+        text-transform: none;
+}
+.sec1{
+    margin-left: 60px;
+}
+.div2{
+    border-left: 10px solid #F4EC5F ;
+    height: 150px;
+    color: #838A93;
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    padding: 2px 0px 6px 21px;
+    font-size: 1.0625rem;
+    line-height: 1.5295;
+    height: 40%;
+    width: 35%;
+}
+.grid {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .grid-item {
+      width: 200px;
+      height: 200px;
+      float: left;
+      background: #fff;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    }
+    
+    .grid-item--width2 { width: 400px; }
+    .grid-item--height2 { height: 400px; }
+    
+    .grid-item:nth-child(1) { background-color: #FF5733; background-image: url(https://img.freepik.com/free-psd/books-icon-isolated-3d-render-illustration_47987-7695.jpg); background-size: cover; }
+    .grid-item:nth-child(2) { background-color: #33A8FF; background-image: url(https://stationers.pk/cdn/shop/articles/7_Must_Have_Student_Stationery_Supplies_In_High_School.jpg?v=1635331870); background-size: cover; }
+    .grid-item:nth-child(3) { background-color: #B533FF; background-image: url(https://media.istockphoto.com/id/1005282482/photo/large-group-of-elementary-students-having-an-art-class-in-the-classroom.jpg?s=612x612&w=0&k=20&c=6141RFZjv_WlL-p4fVl15DV9zpSpJPnWnms6e-Mr_zI=); background-size: cover}
+    .grid-item:nth-child(4) { background-color: #33FF57; background-image: url(https://www.pathwayeducation.com.au/wp-content/uploads/2023/02/Teachers-Demand-Australia.jpg); background-size: cover}
+    .grid-item:nth-child(5) { background-color: #FFBD33; background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyhvLuOfp2WQZnk5sbfskNeFVpejflCEreDA&s); background-size: cover}
+    .grid-item:nth-child(6) { background-color: #FF3355; background-image: url(https://www.peskuwait.com/web/img/after-school.jpg); background-size: cover}
+    .grid-item:nth-child(7) { background-color: #3633FF; background-image: url(https://www.springboardsupplies.co.uk/cdn/shop/articles/pexels-yan-krukov-8612990_800x.jpg?v=1627557564); background-size: cover}
+    
+    .grid :hover{
+        border: 5px solid black;
+        transform: scale(1.1);
+        box-shadow: 20px 20px 30px 3px rgb(235, 3, 3);
+        
+    }  
+    
+    </style>
+
+</head>
+<body>
+    <div class="like">
+        <p id="you">Accepting applications for Pre-K - Grade 9 | <strong>Apply Now</p></strong>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-school"></i> Pike-School
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Academics
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Courses</a>
+                        <a class="dropdown-item" href="#">Admissions</a>
+                        <a class="dropdown-item" href="#">Faculty</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <!-- Search Box and Button -->
+            <form class="form-inline my-2 my-lg-0 ml-3">
+                <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-outline-warning my-2 my-sm-0 search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+
+    <video autoplay="autoplay" data-permitted-user="true" data-resource-title="ps_fall22_30seca_hd_no_music_fc1080p.mp4" data-resource-uuid="86f584bc-95f6-4135-94e5-6fd5893a3174" loop="loop" muted="muted" playsinline="playsinline" poster="https://resources.finalsite.net/videos/v1672927915/pike/xqzzxnqf9zpdobblsxvr/ps_fall22_30seca_hd_no_music_fc1080p.jpg" __idm_id__="40961"><source src="https://resources.finalsite.net/videos/t_video_h265_1080/v1672927915/pike/xqzzxnqf9zpdobblsxvr/ps_fall22_30seca_hd_no_music_fc1080p.mp4" type="video/mp4; codecs=hevc"><source src="https://resources.finalsite.net/videos/t_video_mp4_1080/v1672927915/pike/xqzzxnqf9zpdobblsxvr/ps_fall22_30seca_hd_no_music_fc1080p.mp4" type="video/mp4"><source src="https://resources.finalsite.net/videos/t_video_vp9_1080/v1672927915/pike/xqzzxnqf9zpdobblsxvr/ps_fall22_30seca_hd_no_music_fc1080p.webm" type="video/webm"><div class="fsError">Your web browser does not support the &lt;video&gt; tag.</div></video>
+    <img alt="Pike School" class="pic1" data-image-sizes="[{%22url%22:%22https://resources.finalsite.net/images/v1528986553/pike/m64ajpe9pxl2cokdzmeo/logo.svg%22,%22width%22:180}]" data-resource-description="" data-resource-filename="logo.svg" data-resource-uuid="8dfd2b3b-89b0-4861-9bc7-3d6d298045c2" src="https://resources.finalsite.net/images/v1528986553/pike/m64ajpe9pxl2cokdzmeo/logo.svg" title="" style="" loading="lazy">
+      <section class="sec1">
+        <h2 class="fsElementTitle"><strong>A Pike education ignites a lifelong journey of discovery.</strong></h2>
+        <div class="div2">
+            <p class="para1"><strong>At The Pike School, we are dedicated to fostering an intellectually ambitious, inclusive, and individualized educational environment where we empower every child to explore boundless opportunities for thinking, creating, competing, and igniting their curiosity.</strong></p>
+        </div>
+        <hr>
+        <h1>Simple Packery Layout</h1>
+        <hr>
+        <div class="grid">
+          <div class="grid-item"></div>
+          <div class="grid-item grid-item--width2"></div>
+          <div class="grid-item grid-item--height2"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item grid-item--width2 grid-item--height2"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+        </div>
+      
+      </section>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/packery/2.1.2/packery.pkgd.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        $(document).ready(function() {
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
+        }
+    });
+
+    // Highlight the active menu item
+    $(window).scroll(function() {
+        var scrollDistance = $(window).scrollTop();
+        $('section').each(function(i) {
+            if ($(this).position().top <= scrollDistance + 100) {
+                $('.navbar-nav .nav-item.active').removeClass('active');
+                $('.navbar-nav .nav-item').eq(i).addClass('active');
+            }
+        });
+    }).scroll();
+
+    // Toggle search box on mobile
+    $('.search-btn').on('click', function(e) {
+        if ($(window).width() < 992) {
+            e.preventDefault();
+            $('.search-box').toggleClass('active');
+        }
+    });
+     // Initialize Packery
+     var $grid = $('.grid').packery({
+        itemSelector: '.grid-item',
+        gutter: 10,
+        percentPosition: true
+      });
+});
+    </script>
+</body>
+</html>
