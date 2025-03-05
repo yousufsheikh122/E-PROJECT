@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Font Awesome -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+     
+        .navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    background-color: #7AB843;
+    margin-top: 45px;
+    position: absolute;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    
+}   
+
+.navbar-brand i {
+    margin-right: 10px;
+    color: rgb(78, 72, 136);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+    0-
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #b30505 !important;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+/* Search Box and Button Styles */
+.search-box {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid #444138;
+    background-color: transparent;
+    background-color: #fff;
+    color: #080202;
+    transition: all 0.3s ease;
+    padding: 5px;
+}
+
+.search-box:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+    border-color: #e3f1ef;
+}
+
+.search-btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid #ffc107;
+    color: #1322ac;
+    transition: all 0.3s ease;
+    
+}
+
+.search-btn:hover {
+    background-color: #756d53;
+    color: #343a40;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+
+    .form-inline {
+        margin-top: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+}
+.like{
+    height: 50px;
+    width: 100vw;
+    background-color: #EE7722;
+}
+#you{
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+.pic1{
+    position: relative;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 2%;
+    margin-top: -850px;
+}
+.back{
+            background-image: url(https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_4/v1655829261/pike/eivthfec8kbstkg0miky/5-17-22Pike54924.jpg);
+       background-size: cover;
+      padding-bottom: 500px;
+      padding-top: 50px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position-x: 50%;
+      background-position-y: auto;
+        }
+        .dy{
+            border-bottom: 1px solid #d0d3d2;
+            background: #f9f9f9;
+        }
+        ul{
+            display: inline-block;
+            list-style-type: none;
+            
+        }
+        .jump{
+            display: inline-block;
+            padding: 5px;
+            color: #36413d;
+    background: rgba(0, 0, 0, 0);
+    font-weight: 600;
+    border-right: 1px solid #d0d3d2;
+        }
+        .jump:hover{
+            color: #e72;
+            cursor: pointer;
+        }
+        h1 {
+        font-size: 45px;
+        line-height: 59px;
+        font-family: century-old-style-std, serif;
+    font-weight: 700;
+    color: #e72;
+    margin-top: 50px;
+    }
+    .sec3{
+        margin-left: 40px;
+    }
+    .p3{
+    margin-top: 35px;
+    }
+    .divi{
+        display: flex;
+    }
+    .div4{
+        height: 200px;
+        width: 330px;
+       background-image: url(https://annoying-platypus.transforms.svdcdn.com/production/images/About-us/Main-Reception-OIS.jpg?w=1500&h=870&auto=compress%2Cformat&fit=crop&dm=1635706098&s=1fda6c618f13c2660f01b657824dc177);
+       background-size: cover;
+       background-repeat: no-repeat;
+       margin-top: 40px;
+    }
+    .div5{
+        height: 200px;
+        width: 330px;
+        background-image: url(https://academus.com.pk/wp-content/uploads/2023/09/file_2023-09-08_10.25.56.png.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    .div6{
+        height: 200px;
+        width: 330px;
+        background-image: url(https://cochins.org/images/slider/desktop_imageRy90WllUaWZaOXNVejE5UDh3dzcvZz09.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?nature,landscape') no-repeat center center;
+        background-size: cover;
+        height: 60vh;
+    }
+
+    .text-white-75 {
+        color: rgba(255, 255, 255, 0.75);
+    }
+    </style>
+</head>
+<body>
+    <div class="like">
+        <p id="you">Accepting applications for Pre-K - Grade 9 | <strong>Apply Now</p></strong>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <a class="navbar-brand" href="#">
+            <i class="fas fa-school"></i> Pike-School
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Academics
+                    </a>
+                    <div class="dropdown-menu active" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item active" href="#">Schools</a>
+                        <a class="dropdown-item" href="#">Admissions</a>
+                        <a class="dropdown-item" href="#">Faculty</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <!-- Search Box and Button -->
+            <form class="form-inline my-2 my-lg-0 ml-3">
+                <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-outline-warning my-2 my-sm-0 search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+   <div class="back"></div>
+   <img alt="Pike School" class="pic1" " data-resource-description="" data-resource-filename="logo.svg" data-resource-uuid="8dfd2b3b-89b0-4861-9bc7-3d6d298045c2" src="https://resources.finalsite.net/images/v1528986553/pike/m64ajpe9pxl2cokdzmeo/logo.svg" title="" style="" loading="lazy">
+      <div class="dy">
+        <ul>
+            <li class="jump">Lower School</li>
+            <li class="jump">Upper School</li>
+            <li class="jump">Library</li>
+            <li class="jump">Auxialiary Programs</li>
+            <li class="jump">Secondary School Advising</li>
+            <li class="jump">Student Support</li>
+            <li class="jump">Technology</li>
+            <li class="jump">Arts</li>
+        </ul>
+      </div>
+      <section class="sec3">
+      <h1 class="fsPageTitle">Academics</h1>
+      <p class="p3">The Pike School’s outstanding faculty provides students with a rigorous, challenging, and comprehensive education in small classes supported by exceptional resources. Our students acquire the skills to pursue knowledge independently, a sense of responsibility to the larger community, delight in physical activity, and the desire and confidence to take intellectual and artistic risks. These qualities have perennially given our graduates the ability to distinguish themselves at the competitive <strong>secondary schools</strong> they attend.</p>
+       <div class="divi">
+      <div class="div4">
+        <section class="hero">
+            <div class="container h-25">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 text-center">
+                        <h1 class="display-3 text-white font-weight-bold">Schools in Karachi</h1>
+                        <p class="lead text-white-75 mb-4">Discover amazing schools that are located in this city</p>
+                        <a href="schoolsinkarachi.html" target="_blank" class="btn btn-primary btn-sm">Visit Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+       </div>
+       <div class="div5">
+        <section class="hero">
+            <div class="container h-25">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 text-center">
+                        <h1 class="display-3 text-white font-weight-bold">Schools in Lahore</h1>
+                        <p class="lead text-white-75 mb-4">Discover amazing schools that are located in this city</p>
+                        <a href="#" class="btn btn-primary btn-sm">Visit Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+       </div>
+       <div class="div6">
+        <section class="hero">
+            <div class="container h-25">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 text-center">
+                        <h1 class="display-3 text-white font-weight-bold">Schools in <br>Quetta</h1>
+                        <p class="lead text-white-75 mb-4">Discover amazing schools that are located in this city</p>
+                        <a href="#" class="btn btn-primary btn-sm">Visit Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+       </div>
+    </div>
+    </section>
+</body>
+</html>
