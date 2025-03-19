@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Font Awesome -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    background-color: #7AB843;
+    margin-top: 45px;
+    position: absolute;
+    height: 150px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+    
+}   
+
+.navbar-brand i {
+    margin-right: 10px;
+    color: rgb(78, 72, 136);
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+    color: #b30505 !important;
+}
+#home{
+  margin-top: -25px;
+}
+.dropdown-menu {
+    background-color: #343a40;
+}
+
+.dropdown-item {
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #ffc107;
+    color: #343a40;
+}
+
+/* Search Box and Button Styles */
+.search-box {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid #444138;
+    background-color: transparent;
+    background-color: #fff;
+    color: #080202;
+    transition: all 0.3s ease;
+    padding: 5px;
+}
+
+.search-box:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+    border-color: #e3f1ef;
+}
+
+.search-btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 2px solid #ffc107;
+    color: #1322ac;
+    transition: all 0.3s ease;
+    
+}
+
+.search-btn:hover {
+    background-color: #756d53;
+    color: #343a40;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+
+    .form-inline {
+        margin-top: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+}
+.like{
+    height: 50px;
+    width: 100vw;
+    background-color: #EE7722;
+}
+#you{
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
+.pic1{
+    position: relative;
+    margin-left: 50px;
+    margin-top: 100px;
+    border-radius: 2%;
+    margin-top: 25px;
+    width: 20vw;
+}
+        .dy{
+            border-bottom: 1px solid #d0d3d2;
+            background: #f9f9f9;
+            margin-top: 145px;
+            padding-left: 100px;
+        }
+        ul{
+            display: inline-block;
+            list-style-type: none;
+            padding-left: 20px;
+            
+        }
+        .jump{
+            display: inline-block;
+            font-size: 15px;
+            padding: 20px;
+            padding-left: 20px;
+            color: #36413d;
+    background: rgba(0, 0, 0, 0);
+    font-weight: 600;
+    border-right: 1px solid #d0d3d2;
+        }
+        .jump:hover{
+            color: #e72;
+            cursor: pointer;
+        }
+        h1 {
+        font-size: 45px;
+        line-height: 59px;
+        font-family: century-old-style-std, serif;
+    font-weight: 700;
+    color: #e72;
+    margin-top: 50px;
+    }
+    h1 {
+        font-size: 55px;
+        line-height: 59px;
+        font-family: century-old-style-std, serif;
+    font-weight: 700;
+    color: #e72;
+    margin-top: 50px;
+    }
+    .sec3{
+        margin-left: 150px;
+        margin-right: 400px;
+    }
+    .p3{
+    margin-top: 35px;
+    }
+    .div8{
+        margin-top: 40px;
+        height: 70px;
+        width: 100vw;
+        border-left: 10px solid #662299 ;
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+    .h2{
+        font-size: 18px;
+        font-weight: bolder;
+        color: #662299;
+        width: 500px;
+        font-family: sans-serif;
+    line-height: 1.7;
+    }
+    .div9{
+        border: 2px solid black;
+        height: 200px;
+        width: 300px;
+        display: inline-block;
+        float: right;
+        margin-right: 40px;
+        margin-top: -530px;
+        background-image: url(https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1651169697/pike/h3pzsnckuc42eum3h66j/10-6-21Pike53239_1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .div10{
+        border: 2px solid black;
+        height: 200px;
+        width: 300px;
+        display: inline-block;
+        float: right;
+        margin-right: 40px;
+        margin-top: -270px;
+        background-image: url(https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1692277878/pike/bpcn7ieof5wodjmmlouk/5-22-23Pike57597.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .divi10{
+        display: flex;
+        margin-left: 150px;
+        gap: 25px;
+    }
+    .div11{
+        border: 2px solid black;
+        height: 250px;
+        width: 250px;
+        margin-top: 70px;
+    }
+    .img1{        
+        background-image: url(https://media.istockphoto.com/id/1358014313/photo/group-of-elementary-students-having-computer-class-with-their-teacher-in-the-classroom.jpg?s=612x612&w=0&k=20&c=3xsykmHXFa9ejL_sP2Xxiow7zdtmKvg15UxXFfgR98Q=);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .img2{        
+        background-image: url(https://www.commandeducation.com/wp-content/uploads/2020/11/high-school-student-submitting-applications-early.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .img3{        
+        background-image: url(https://www.camperdown.org/editoruploads/images/General/tuitionandfinancialaid.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .img4{        
+        background-image: url(https://www.imom.com/wp-content/uploads/2021/07/back-to-school-activities-scaled.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    h5{
+        margin-top: 200px;
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: bolder;
+    }
+    .h7{
+        margin-left: 18px;
+        background-color: #85BD53;
+    }
+    .h8{
+        margin-left: 30px;
+        background-color: #04A4CF;
+    }
+    .h9{
+        margin-left: 18px;
+        background-color: #EA7C2E;
+    }
+    .h10{
+        margin-left: 90px;
+        background-color: #ED42AB;
+    }
+.fsElementTitle {
+    margin-top: 70px;
+    text-transform: uppercase;
+    color: #00aebc;
+    font-size: 30px;
+    font-weight: bolder;
+    line-height: 1.15385;
+    margin-bottom: 50px;
+}
+.sec4{
+    margin-left: 150px;
+}
+.accordion-button{
+    font-size: 20px;
+    color: #EE7722;
+    font-weight: bolder;
+}
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+  transition: all 0.5s;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+}
+.accordion-button::after {
+  transition: all 0.5s;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}   
+</style>
+</head>
+<body>
+    <div class="like">
+        <p id="you">Accepting applications for Pre-K - Grade 9 | <strong>Apply Now</p></strong>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+        <a class="navbar-brand" href="#">
+          <img src="img.jpg.jpg" class="img-fluid pic1">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link" id="home" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="aboutus.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="school.html">Schools</a>
+            </li>
+                  <a class="nav-link" href="contactus.html">Contact Us</a>
+              </li>
+          </ul>
+          <!-- Search Box and Button -->
+          <form class="form-inline my-2 my-lg-0 ml-3">
+              <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search..." aria-label="Search">
+              <button class="btn btn-outline-warning my-2 my-sm-0 search-btn" type="submit">
+                  <i class="fas fa-search"></i>
+              </button>
+          </form>
+      </div>
+  </nav>
+      <div class="container-fluid dy">
+        <ul>
+            <li class="jump">Lower School</li>
+            <li class="jump">Upper School</li>
+            <li class="jump">Library</li>
+            <li class="jump">Auxialiary Programs</li>
+            <li class="jump">Secondary School Advising</li>
+            <li class="jump">Student Support</li>
+            <li class="jump">Technology</li>
+            <li class="jump">Arts</li>
+        </ul>
+      </div>
+      <section class="sec3">
+        <h1 class="fsPageTitle">Pre-Kindergarten</h1>
+        <div class="div8">
+            <h2 class="h2"><strong>You believe your child has tremendous potential.
+                At The Pike School, so do we.</strong></h2>
+        </div>
+        <p class="p3">Our overall philosophy and approach regards all of our pre-kindergarten students as individuals with their own learning abilities — and challenges — that are not fixed, but rather are able to be built upon and developed with care and intention. <br> <br> Our teachers know their students extremely well. They help celebrate each child’s successes and understand how they learn best. They are committed to helping each preschooler grow socially and emotionally; much of our work integrates teaching these skills directly and supporting children in applying them throughout the day. <br> <br> As Massachusetts’s top private pre-k, we know your child’s academic journey is also crucial. Pike's Professional Learning Team approach allows us to continuously consider and provide flexible learning environments to challenge, support, and meet each child's needs. <br> <br> Through regular collaboration, our preschool teachers determine how best to work with your child, guiding them to take risks and empowering them to challenge themselves. In turn, they gain enduring understanding of curricular topics and learn deeply about themselves and the world around them.</p>
+      </section>
+      <hr>
+        <div class="div9"></div>
+        <div class="div10"></div>
+        <div class="container-fluid divi10">
+            <div class="div11 img1">
+                <h5 class="h7">Tell Us About Yourself</h5>
+            </div>
+            <div class="div11 img2">
+                <h5 class="h8">Application Process</h5>
+            </div>
+            <div class="div11 img3">
+                <h5 class="h9">Tution & Financial Aid</h5>
+            </div>
+            <div class="div11 img4">
+                <h5 class="h10">Events</h5>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <section class="sec4">
+        <h2 class="fsElementTitle">Curriculum</h2>
+        <div class="container ml-1 mb-5">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    LANGUAGE ARTS
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    During our literacy studies, children explore all aspects of oral language. They develop listening skills as they: converse, chant and produce rhymes, listen for sounds in words, explore word meanings, listen to and discuss quality literature, read aloud, sing songs and enjoy poetry. Language activities of this kind directly link to the development of comprehension skills. Building on children’s knowledge of the alphabet and letters in their own names, our literacy lessons include letter naming, learning letter sounds, printing the uppercase letter forms, reading predictable books that emphasize particular sounds, and experimenting with writing words that express their thoughts. Enjoyment of literature is key to our theme development and stories are read throughout the day to enhance learning in all content areas including nonfiction books that explore math, social studies and science topics.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    MATH
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Four and five-year olds are inquisitive mathematicians. Pre-Kindergarten math builds upon children's eagerness to count, compare, make new designs and discover patterns. The children are learning to understand numbers as a group of objects, discover and use new vocabulary, sort and categorize, measure and interpret data. An emphasis is placed in hands-on activities and physical movement to help develop visual spatial skills. In a small group setting students play math games, use manipulative materials and connect number concepts to everyday life. As children engage in math activities, they learn problem solving and reasoning skills and make connections with previous mathematical learning. Our students hop, jump and clap their way through Pre-K math class.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    SOCIAL STUDIES
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Social studies focuses on people as individuals, as members of a family, as members of the Pike community, and in the world at large. Students learn to understand the roles, responsibilities and services provided by community workers. The children are inspired to respect and appreciate similarities and differences amongst themselves, including their basic wants and needs for food, clothing and shelter. Through multicultural stories, they learn about the many places in which people live, work and play. Using interactive games and hands-on activities, the children are able to broaden their understanding of the greater world and begin to think as global citizens.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                   SCIENCE
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    The science curriculum is based on the natural curiosity of children as they interact with their surroundings, make observations and formulate questions. Through collaborative activities, children are encouraged to use their five senses and explore the world around them. They learn to understand their bodies, how they work and ways to make them move. They learn how to recognize the differences between living and non-living organisms and to sort and categorize a variety of items. Using our own garden plot and The Pike School nature trail, students have first-hand opportunities to explore nature and the life cycles of plants and begin to understand the impact of seasons on everyday life.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    PHYSICAL EDUCATION
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    The Lower School curriculum in physical education is designed to develop movement, balance, and spatial awareness—the skills required for moving through space. Games tend to be collaborative rather than competitive in these early years, and they concentrate on creative movement and the joy of physical activity. Children work with a variety of small apparatus, including balls, beanbags, ropes and hoops. Lower School students learn the importance of developing a healthy, active lifestyle. This is emphasized as students explore various activities in school that help them develop strong bodies and healthy hearts.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    ART
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    In Lower School art, students are introduced to the fundamental skills, ideas and processes of art making with an emphasis on creative choices and personal expression. Each project is an opportunity to build cognitive and tactile skills with an increase in complexity at each grade level. Pre-K students will alternate among structured projects, collaborative work and materials based explorations. All students will work collaboratively, respond to famous artworks and works of their peers, and examine the connections between art, academic subjects and everyday life. All students participate in the spring school-wide art exhibition.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    MUSIC
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    The music program in Lower School focuses on helping children in Pre-K through Grade 2 develop core musical skills through singing, instrument play, The music program in Lower School focuses on helping children in Pre-K through Grade 2 develop core musical skills through singing, instrument play, movement, improvisation, and composition. Influenced by Kodaly, Orff, and Music Learning Theory, students learn music similar to the way they acquire a new language; music is primarily taught by ear, with students experiencing and creating music in a number of ways before they learn to read and write notation. As part of their overall curriculum, Lower School musicians will learn a variety of songs from different cultures and learn about the larger expressive qualities of music. <br> <br> Lower School music students participate in two concerts per year. <br><br> In Pre-K, students learn about their singing and speaking voices and how to feel the steady beat. Locomotor and non-locomotor activities help them with their sense of weight, flow, space and timing. Story songs, dramatic play, and simple dances help them learn about other musical concepts such as melody, rhythm, form and expression.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    WORLD LANGUAGE
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    The Lower School Spanish program is designed to provide students with exposure to and appreciation for the Spanish language. This is implemented at their developmental level through proficiency-based instruction that focuses on what the student can do with the language. The program is focused on the ACTFL World-Readiness Standards for Learning Languages, also known as the five Cs: Communication, Cultures, Connections, Comparisons, and Communities. Students start right away listening and speaking in Spanish and have the opportunity to interact in the target language with each other. The Spanish class is conducted 80% in the target language. In Pre-K, students play games and listen to music to support communication in Spanish. 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer class="footer-section">
+            <div class="container-fluid">
+                <div class="footer-cta pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cta-text">
+                                    <h4>Find us</h4>
+                                    <span>1010 Avenue, sw 54321, chandigarh</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-phone"></i>
+                                <div class="cta-text">
+                                    <h4>Call us</h4>
+                                    <span>9876543210 0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="far fa-envelope-open"></i>
+                                <div class="cta-text">
+                                    <h4>Mail us</h4>
+                                    <span>mail@info.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a>
+                                </div>
+                                <div class="footer-text">
+                                    <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                                    elit,Lorem ipsum dolor sit amet.</p>
+                                </div>
+                                <div class="footer-social-icon">
+                                    <span>Follow us</span>
+                                    <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                    <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">about</a></li>
+                                    <li><a href="#">services</a></li>
+                                    <li><a href="#">portfolio</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Expert Team</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Latest News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Subscribe</h3>
+                                </div>
+                                <div class="footer-text mb-25">
+                                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="Email Address">
+                                        <button><i class="fab fa-telegram-plane"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+  
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+    </html>

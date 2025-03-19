@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestige School</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar-custom {
+            background-color: #7AB843;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #333;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #008b17;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            margin-right: 5px;
+            border-radius: 15px;
+        }
+
+        #navbarNav {
+            margin-left: 650px;
+        }
+
+        .div1 {
+            height: 40px;
+            width: 100%;
+            background-color: #EE7722;
+            text-align: center;
+            font-weight: 600;
+        }
+        video {
+            width: 100%;
+        }
+
+        h1 {
+            margin-left: 20px;
+            color: #EE7722;
+            font-size: 80px;
+        }
+
+        .div2 {
+            width: 10px;
+            height: 150px;
+            background-color: rgb(0, 255, 76);
+            margin-left: 20px;
+            border-radius: 50px;
+        }
+
+        p {
+            box-sizing: border-box;
+            width: 400px;
+            height: 150px;
+            margin-left: 50px;
+            position: absolute;
+            top: 1200px;
+        }
+
+        .container {
+            max-width: 100rem;
+            margin: 0 auto;
+            padding: 0 2rem 2rem;
+        }
+
+        .heading {
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            padding: 3.5rem 0;
+            color: #1a1a1a;
+        }
+
+        .heading span {
+            display: block;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            /* Compensate for excess margin on outer gallery flex items */
+            margin: -1rem -1rem;
+        }
+
+        .gallery-item {
+            /* Minimum width of 24rem and grow to fit available space */
+            flex: 1 0 24rem;
+            /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+            margin: 1rem;
+            box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 400ms ease-out;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.15);
+        }
+
+        /*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+        @supports (display: grid) {
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+                grid-gap: 2rem;
+            }
+
+            .gallery,
+            .gallery-item {
+                margin: 0;
+            }
+        }
+
+        :root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+serif;{
+  font-size: 14px;
+}
+
+body{
+  height: 100%;
+}
+
+.hero-section{
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card{
+  list-style: none;
+  position: relative;
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 40px;
+  align-items: stretch;
+  width: 100%;
+  margin: auto 0;
+}
+/* logo */
+.pic1{
+  margin-top: -1350px;
+  margin-left: 50px;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .grid {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .grid {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .grid {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px)
+{
+  .grid {
+    width: 1140px;
+  }
+}
+
+.mycard {
+  position: relative;
+  height: auto;
+  padding: 50px 20px;
+  background: #ff0;
+  border-radius: 10px;
+  border: 4px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  animation: animate 5s linear infinite;
+  overflow: hidden;
+}
+
+.mycard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  transform: skewx(-5deg);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.mycard:nth-child(1) {
+  background: #3fc012 url(https://www.transparenttextures.com/patterns/basketball.png)
+}
+
+.mycard:nth-child(2) {
+  background: #f1206a url(https://www.transparenttextures.com/patterns/basketball.png);
+}
+
+.mycard:nth-child(3) {
+  background: #0f84d4 url(https://www.transparenttextures.com/patterns/basketball.png);
+}
+
+@keyframes animate
+{
+  0%
+  {
+    background-position: 0 0;
+  }
+  100%
+  {
+    background-position: 0 -196px;
+  }
+}
+
+.mycard .image {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.mycard .image img {
+  width: 100%;
+  height: auto;
+}
+
+.mycard .text {
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 50px;
+}
+
+.mycard .text::before {
+  content: "\f10d";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  font-family: FontAwesome;
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.5);
+  transform: translatex(-50%);
+}
+
+.mycard .details {
+  text-align: center;
+}
+
+.mycard .details h2 {
+  position: relative;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.mycard .details h2 span {
+  font-size: 20px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+
+    </style>
+</head>
+
+<body>
+    
+
+
+        <!-- Navbar -->
+    <div class="div1">Accepting applications for Pre-K - Grade 9 | Apply Now</div>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">Prestige-School</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="school.html">Schools</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+            </ul>
+            <form class="form-inline search-box">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Q</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <!-- video -->
+    <div class="container-fluid">
+        <video autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline"
+            poster="https://resources.finalsite.net/videos/v1672927915/pike/xqzzxnqf9zpdobblsxvr/ps_fall22_30seca_hd_no_music_fc1080p.jpg"
+            __idm_id__="40961">
+            <source src="Video/video.mp4" type="video/mp4">
+            <div class="fsError">Your web browser does not support the &lt;video&gt; tag.</div>
+        </video>
+    </div>
+     <!-- logo -->
+     <img src="img.jpg.jpg" class="img-fluid w-25 pic1">
+    <!-- paragraph -->
+    <div>
+        <h1>A Pike education ignites a <br> lifelong journey of <br>discovery.</h1>
+        <div class="div2"></div>
+        <p>At The Pike School, we are dedicated to fostering an intellectually ambitious, inclusive, and individualized
+            educational environment where we empower every child to explore boundless opportunities for thinking,
+            creating, competing, and igniting their curiosity.</p>
+    </div>
+
+
+
+    <!-- gallery -->
+    <hr>
+    <section>
+        <div class="container">
+
+            <h1 class="heading">SCHOOL ACTIVITIES AND SPORT CLUB<span>CANTEEN & PLAYGROUND</span></h1>
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+                    <img class="gallery-image"
+                        src="https://media.istockphoto.com/id/463374569/photo/school-dinners.jpg?s=612x612&w=0&k=20&c=VJSQ_oqxbQ3fJSfbSJqHSdjA4ig3WRFfQ7B1fUeIaYU="
+                        alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image"
+                        src="https://wallpapers.com/images/featured/playground-irpe489dxv7c2uct.jpg"
+                        alt="sunset behind San Francisco city skyline">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image"
+                        src="https://media.istockphoto.com/id/2162818006/photo/child-playing-football-kids-play-soccer.jpg?s=612x612&w=0&k=20&c=Wc7giuSfMdni_fl36eLoGBYb7TbItp54Y_xlXQWXFa0="
+                        alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image"
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgE1niUBpFpGAuNOdATE9yGGiDDgnIqRUtx3foasL2ulDmz4gcAz-6hMKdJg2Und9SKKIw8DZxXM0GyNKCVYP0vvTs3QSlj5iXy4jQe2nKeY4AN9YqJ7wSRC5XrfcQkNWAgBGvJ2di3tRJm/s1600/bstc-canteen_l.jpg"
+                        alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image"
+                        src="https://media.istockphoto.com/id/466335022/photo/space-hopper-challenge.jpg?s=612x612&w=0&k=20&c=nEqdwhaLdW7FU3l1nDi5jvCIH8pWHj94zKiBrsXuB68="
+                        alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+                </div>
+
+                <div class="gallery-item">
+                    <img class="gallery-image"
+                        src="https://media.gettyimages.com/id/1592674551/photo/childrens-team-taking-a-break-after-training-on-the-sports-field.jpg?s=612x612&w=gi&k=20&c=HcgIAXTMTzJjQco3MAIhxsADua68JBe0v8hUJuCpq2o="
+                        alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+    <!-- CARDS -->
+    <section>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+        <section class="hero-section">
+          <div class="card-grid">
+            <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://images.pexels.com/photos/6326377/pexels-photo-6326377.jpeg?cs=srgb&dl=pexels-vanessa-garcia-6326377.jpg&fm=jpg)"></div>
+              <div class="card__content">
+                <h4 style="color: #fff8f8 ; margin-left: 40px; margin-top: 350px;">Physic Professor</h4>
+
+              </div>
+            </a>
+            <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://media.istockphoto.com/id/1366724990/photo/smiling-computer-science-teacher-using-laptop-during-a-class-and-looking-at-camera.jpg?s=612x612&w=0&k=20&c=zVHFiRTY0aSu3zpDGM3jWV1sXBkPurXfr4GmClgvsiI=)"></div>
+              <div class="card__content">
+                <h4 style="color: #fff8f8 ; margin-left: 40px; margin-top: 350px;">English Professor</h4>
+
+              </div>
+            </a>
+            <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpVqvmc6xuajB5xSkUhAVjU9HIi_zY2ybpAg&s)"></div>
+              <div class="card__content">
+                <h4 style="color: #fff8f8 ; margin-left: 40px; margin-top: 350px;">Math Professor</h4>
+              </div>
+            </li>
+            <a class="card" href="#">
+              <div class="card__background" style="background-image: url(https://www.shutterstock.com/shutterstock/videos/1101012877/thumb/1.jpg?ip=x480)"></div>
+              <div class="card__content">
+                <h4 style="color: #fff8f8 ; margin-left: 40px; margin-top: 350px;">Science Teacher</h4>
+
+              </div>
+            </a>
+          <div>
+        </section>
+    </section>
+
+<br><br>
+    <hr>
+    <!-- Animated cards -->
+     <section>
+        <div class="grid ml-5">
+            <div class="mycard text-center ml-5">
+              <div class="content">
+                <div class="text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+              </div>
+              <div class="author">
+                <div class="image">
+                  <img src="http://icons.iconarchive.com/icons/hopstarter/face-avatars/128/Male-Face-D5-icon.png" class="img-fluid">
+                </div>
+                <div class="details">
+                  <h2>Someone Famous<br><span>Website Designer</span></h2>
+                </div>
+              </div>
+            </div>
+            <div class="mycard text-center ml-5">
+              <div class="content">
+                <div class="text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+              </div>
+              <div class="author">
+                <div class="image">
+                  <img src="http://icons.iconarchive.com/icons/hopstarter/face-avatars/128/Female-Face-FE-5-blonde-icon.png" class="img-fluid">
+                </div>
+                <div class="details">
+                  <h2>Someone Famous<br><span>Website Designer</span></h2>
+                </div>
+              </div>
+            </div>        
+            <div class="mycard text-center ml-5">
+              <div class="content">
+                <div class="text">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+              </div>
+              <div class="author">
+                <div class="image">
+                  <img src="http://icons.iconarchive.com/icons/hopstarter/face-avatars/128/Female-Face-FI-1-icon.png" class="img-fluid">
+                </div>
+                <div class="details">
+                  <h2>Someone Famous<br><span>Website Designer</span></h2>
+                </div>
+              </div>
+            </div> 
+          </div> 
+          
+     </section>
+     <br>
+     <hr>
+     <br>
+     <!-- footer -->
+     <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>1010 Avenue, sw 54321, chandigarh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>9876543210 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>mail@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">about</a></li>
+                                <li><a href="#">services</a></li>
+                                <li><a href="#">portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Expert Team</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
